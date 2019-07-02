@@ -5,7 +5,8 @@
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
     operationReflection="true" importOrganizing="true">
   <foreignModel>mdc.ecore</foreignModel>
-  <genPackages prefix="Mdc" disposableProviderFactory="true" ecorePackage="mdc.ecore#/">
+  <genPackages prefix="Mdc" basePackage="br.ufes.inf.mdc" disposableProviderFactory="true"
+      ecorePackage="mdc.ecore#/">
     <genClasses ecoreClass="mdc.ecore#//Chatbot">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdc.ecore#//Chatbot/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdc.ecore#//Chatbot/token"/>
@@ -13,24 +14,17 @@
     </genClasses>
     <genClasses ecoreClass="mdc.ecore#//State">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mdc.ecore#//State/errorState"/>
-      <genOperations ecoreOperation="mdc.ecore#//State/getName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdc.ecore#//State/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdc.ecore#//State/messages"/>
       <genOperations ecoreOperation="mdc.ecore#//State/entryPoint"/>
-      <genOperations ecoreOperation="mdc.ecore#//State/getMessages"/>
     </genClasses>
     <genClasses ecoreClass="mdc.ecore#//TransactionalState"/>
     <genClasses ecoreClass="mdc.ecore#//StationaryState">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mdc.ecore#//StationaryState/transitions"/>
       <genOperations ecoreOperation="mdc.ecore#//StationaryState/handler"/>
-      <genOperations ecoreOperation="mdc.ecore#//StationaryState/getTransitions"/>
       <genOperations ecoreOperation="mdc.ecore#//StationaryState/sincTransitions"/>
     </genClasses>
-    <genClasses ecoreClass="mdc.ecore#//TransactionalStateImpl">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdc.ecore#//TransactionalStateImpl/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdc.ecore#//TransactionalStateImpl/messages"/>
-    </genClasses>
-    <genClasses ecoreClass="mdc.ecore#//StationaryStateImpl">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdc.ecore#//StationaryStateImpl/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdc.ecore#//StationaryStateImpl/messages"/>
-    </genClasses>
+    <genClasses ecoreClass="mdc.ecore#//TransactionalStateImpl"/>
+    <genClasses ecoreClass="mdc.ecore#//StationaryStateImpl"/>
   </genPackages>
 </genmodel:GenModel>
