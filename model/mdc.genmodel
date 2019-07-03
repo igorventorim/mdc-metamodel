@@ -13,7 +13,6 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mdc.ecore#//Chatbot/states"/>
     </genClasses>
     <genClasses ecoreClass="mdc.ecore#//State">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mdc.ecore#//State/errorState"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdc.ecore#//State/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdc.ecore#//State/messages"/>
       <genOperations ecoreOperation="mdc.ecore#//State/entryPoint"/>
@@ -21,6 +20,7 @@
     <genClasses ecoreClass="mdc.ecore#//TransactionalState"/>
     <genClasses ecoreClass="mdc.ecore#//StationaryState">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mdc.ecore#//StationaryState/transitions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mdc.ecore#//StationaryState/errorState"/>
       <genOperations ecoreOperation="mdc.ecore#//StationaryState/handler"/>
       <genOperations ecoreOperation="mdc.ecore#//StationaryState/sincTransitions"/>
     </genClasses>

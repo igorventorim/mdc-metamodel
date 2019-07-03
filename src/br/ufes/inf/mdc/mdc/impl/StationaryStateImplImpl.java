@@ -6,7 +6,6 @@ import br.ufes.inf.mdc.mdc.MdcPackage;
 import br.ufes.inf.mdc.mdc.State;
 import br.ufes.inf.mdc.mdc.StationaryStateImpl;
 import br.ufes.inf.mdc.mdc.TransactionalState;
-
 import java.lang.reflect.InvocationTargetException;
 
 import java.util.Collection;
@@ -17,7 +16,6 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -32,25 +30,15 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link br.ufes.inf.mdc.mdc.impl.StationaryStateImplImpl#getErrorState <em>Error State</em>}</li>
  *   <li>{@link br.ufes.inf.mdc.mdc.impl.StationaryStateImplImpl#getName <em>Name</em>}</li>
  *   <li>{@link br.ufes.inf.mdc.mdc.impl.StationaryStateImplImpl#getMessages <em>Messages</em>}</li>
  *   <li>{@link br.ufes.inf.mdc.mdc.impl.StationaryStateImplImpl#getTransitions <em>Transitions</em>}</li>
+ *   <li>{@link br.ufes.inf.mdc.mdc.impl.StationaryStateImplImpl#getErrorState <em>Error State</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class StationaryStateImplImpl extends MinimalEObjectImpl.Container implements StationaryStateImpl {
-	/**
-	 * The cached value of the '{@link #getErrorState() <em>Error State</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getErrorState()
-	 * @generated
-	 * @ordered
-	 */
-	protected TransactionalState errorState;
-
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -92,6 +80,16 @@ public class StationaryStateImplImpl extends MinimalEObjectImpl.Container implem
 	protected EList<State> transitions;
 
 	/**
+	 * The cached value of the '{@link #getErrorState() <em>Error State</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getErrorState()
+	 * @generated
+	 * @ordered
+	 */
+	protected TransactionalState errorState;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -108,46 +106,6 @@ public class StationaryStateImplImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	protected EClass eStaticClass() {
 		return MdcPackage.Literals.STATIONARY_STATE_IMPL;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public TransactionalState getErrorState() {
-		if (errorState != null && errorState.eIsProxy()) {
-			InternalEObject oldErrorState = (InternalEObject)errorState;
-			errorState = (TransactionalState)eResolveProxy(oldErrorState);
-			if (errorState != oldErrorState) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MdcPackage.STATIONARY_STATE_IMPL__ERROR_STATE, oldErrorState, errorState));
-			}
-		}
-		return errorState;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public TransactionalState basicGetErrorState() {
-		return errorState;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setErrorState(TransactionalState newErrorState) {
-		TransactionalState oldErrorState = errorState;
-		errorState = newErrorState;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MdcPackage.STATIONARY_STATE_IMPL__ERROR_STATE, oldErrorState, errorState));
 	}
 
 	/**
@@ -205,6 +163,46 @@ public class StationaryStateImplImpl extends MinimalEObjectImpl.Container implem
 	 * @generated
 	 */
 	@Override
+	public TransactionalState getErrorState() {
+		if (errorState != null && errorState.eIsProxy()) {
+			InternalEObject oldErrorState = (InternalEObject)errorState;
+			errorState = (TransactionalState)eResolveProxy(oldErrorState);
+			if (errorState != oldErrorState) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MdcPackage.STATIONARY_STATE_IMPL__ERROR_STATE, oldErrorState, errorState));
+			}
+		}
+		return errorState;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TransactionalState basicGetErrorState() {
+		return errorState;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setErrorState(TransactionalState newErrorState) {
+		TransactionalState oldErrorState = errorState;
+		errorState = newErrorState;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MdcPackage.STATIONARY_STATE_IMPL__ERROR_STATE, oldErrorState, errorState));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public State handler() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -243,15 +241,15 @@ public class StationaryStateImplImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case MdcPackage.STATIONARY_STATE_IMPL__ERROR_STATE:
-				if (resolve) return getErrorState();
-				return basicGetErrorState();
 			case MdcPackage.STATIONARY_STATE_IMPL__NAME:
 				return getName();
 			case MdcPackage.STATIONARY_STATE_IMPL__MESSAGES:
 				return getMessages();
 			case MdcPackage.STATIONARY_STATE_IMPL__TRANSITIONS:
 				return getTransitions();
+			case MdcPackage.STATIONARY_STATE_IMPL__ERROR_STATE:
+				if (resolve) return getErrorState();
+				return basicGetErrorState();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -265,9 +263,6 @@ public class StationaryStateImplImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case MdcPackage.STATIONARY_STATE_IMPL__ERROR_STATE:
-				setErrorState((TransactionalState)newValue);
-				return;
 			case MdcPackage.STATIONARY_STATE_IMPL__NAME:
 				setName((String)newValue);
 				return;
@@ -278,6 +273,9 @@ public class StationaryStateImplImpl extends MinimalEObjectImpl.Container implem
 			case MdcPackage.STATIONARY_STATE_IMPL__TRANSITIONS:
 				getTransitions().clear();
 				getTransitions().addAll((Collection<? extends State>)newValue);
+				return;
+			case MdcPackage.STATIONARY_STATE_IMPL__ERROR_STATE:
+				setErrorState((TransactionalState)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -291,9 +289,6 @@ public class StationaryStateImplImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case MdcPackage.STATIONARY_STATE_IMPL__ERROR_STATE:
-				setErrorState((TransactionalState)null);
-				return;
 			case MdcPackage.STATIONARY_STATE_IMPL__NAME:
 				setName(NAME_EDEFAULT);
 				return;
@@ -302,6 +297,9 @@ public class StationaryStateImplImpl extends MinimalEObjectImpl.Container implem
 				return;
 			case MdcPackage.STATIONARY_STATE_IMPL__TRANSITIONS:
 				getTransitions().clear();
+				return;
+			case MdcPackage.STATIONARY_STATE_IMPL__ERROR_STATE:
+				setErrorState((TransactionalState)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -315,14 +313,14 @@ public class StationaryStateImplImpl extends MinimalEObjectImpl.Container implem
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case MdcPackage.STATIONARY_STATE_IMPL__ERROR_STATE:
-				return errorState != null;
 			case MdcPackage.STATIONARY_STATE_IMPL__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case MdcPackage.STATIONARY_STATE_IMPL__MESSAGES:
 				return messages != null && !messages.isEmpty();
 			case MdcPackage.STATIONARY_STATE_IMPL__TRANSITIONS:
 				return transitions != null && !transitions.isEmpty();
+			case MdcPackage.STATIONARY_STATE_IMPL__ERROR_STATE:
+				return errorState != null;
 		}
 		return super.eIsSet(featureID);
 	}

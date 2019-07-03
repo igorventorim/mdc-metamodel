@@ -9,8 +9,6 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="State" abstract="true" interface="true">
     <eOperations name="entryPoint" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="errorState" eType="#//TransactionalState"
-        derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="messages" upperBound="-1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" transient="true"/>
@@ -23,6 +21,8 @@
     <eOperations name="sincTransitions"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="transitions" upperBound="-1"
         eType="#//State" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="errorState" lowerBound="1"
+        eType="#//TransactionalState"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TransactionalStateImpl" eSuperTypes="#//TransactionalState"/>
   <eClassifiers xsi:type="ecore:EClass" name="StationaryStateImpl" eSuperTypes="#//StationaryState"/>

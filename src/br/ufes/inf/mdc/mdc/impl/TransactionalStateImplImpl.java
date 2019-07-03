@@ -3,21 +3,20 @@
 package br.ufes.inf.mdc.mdc.impl;
 
 import br.ufes.inf.mdc.mdc.MdcPackage;
-import br.ufes.inf.mdc.mdc.TransactionalState;
 import br.ufes.inf.mdc.mdc.TransactionalStateImpl;
 
 import java.lang.reflect.InvocationTargetException;
 
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 
 /**
@@ -28,7 +27,6 @@ import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link br.ufes.inf.mdc.mdc.impl.TransactionalStateImplImpl#getErrorState <em>Error State</em>}</li>
  *   <li>{@link br.ufes.inf.mdc.mdc.impl.TransactionalStateImplImpl#getName <em>Name</em>}</li>
  *   <li>{@link br.ufes.inf.mdc.mdc.impl.TransactionalStateImplImpl#getMessages <em>Messages</em>}</li>
  * </ul>
@@ -36,16 +34,6 @@ import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
  * @generated
  */
 public class TransactionalStateImplImpl extends MinimalEObjectImpl.Container implements TransactionalStateImpl {
-	/**
-	 * The cached value of the '{@link #getErrorState() <em>Error State</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getErrorState()
-	 * @generated
-	 * @ordered
-	 */
-	protected TransactionalState errorState;
-
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -93,46 +81,6 @@ public class TransactionalStateImplImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	protected EClass eStaticClass() {
 		return MdcPackage.Literals.TRANSACTIONAL_STATE_IMPL;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public TransactionalState getErrorState() {
-		if (errorState != null && errorState.eIsProxy()) {
-			InternalEObject oldErrorState = (InternalEObject)errorState;
-			errorState = (TransactionalState)eResolveProxy(oldErrorState);
-			if (errorState != oldErrorState) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MdcPackage.TRANSACTIONAL_STATE_IMPL__ERROR_STATE, oldErrorState, errorState));
-			}
-		}
-		return errorState;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public TransactionalState basicGetErrorState() {
-		return errorState;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setErrorState(TransactionalState newErrorState) {
-		TransactionalState oldErrorState = errorState;
-		errorState = newErrorState;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MdcPackage.TRANSACTIONAL_STATE_IMPL__ERROR_STATE, oldErrorState, errorState));
 	}
 
 	/**
@@ -191,9 +139,6 @@ public class TransactionalStateImplImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case MdcPackage.TRANSACTIONAL_STATE_IMPL__ERROR_STATE:
-				if (resolve) return getErrorState();
-				return basicGetErrorState();
 			case MdcPackage.TRANSACTIONAL_STATE_IMPL__NAME:
 				return getName();
 			case MdcPackage.TRANSACTIONAL_STATE_IMPL__MESSAGES:
@@ -211,9 +156,6 @@ public class TransactionalStateImplImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case MdcPackage.TRANSACTIONAL_STATE_IMPL__ERROR_STATE:
-				setErrorState((TransactionalState)newValue);
-				return;
 			case MdcPackage.TRANSACTIONAL_STATE_IMPL__NAME:
 				setName((String)newValue);
 				return;
@@ -233,9 +175,6 @@ public class TransactionalStateImplImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case MdcPackage.TRANSACTIONAL_STATE_IMPL__ERROR_STATE:
-				setErrorState((TransactionalState)null);
-				return;
 			case MdcPackage.TRANSACTIONAL_STATE_IMPL__NAME:
 				setName(NAME_EDEFAULT);
 				return;
@@ -254,8 +193,6 @@ public class TransactionalStateImplImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case MdcPackage.TRANSACTIONAL_STATE_IMPL__ERROR_STATE:
-				return errorState != null;
 			case MdcPackage.TRANSACTIONAL_STATE_IMPL__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case MdcPackage.TRANSACTIONAL_STATE_IMPL__MESSAGES:

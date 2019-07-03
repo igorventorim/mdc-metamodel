@@ -123,22 +123,13 @@ public interface MdcPackage extends EPackage {
 	int STATE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Error State</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE__ERROR_STATE = 0;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STATE__NAME = 1;
+	int STATE__NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Messages</b></em>' attribute list.
@@ -147,7 +138,7 @@ public interface MdcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STATE__MESSAGES = 2;
+	int STATE__MESSAGES = 1;
 
 	/**
 	 * The number of structural features of the '<em>State</em>' class.
@@ -156,7 +147,7 @@ public interface MdcPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STATE_FEATURE_COUNT = 3;
+	int STATE_FEATURE_COUNT = 2;
 
 	/**
 	 * The operation id for the '<em>Entry Point</em>' operation.
@@ -185,15 +176,6 @@ public interface MdcPackage extends EPackage {
 	 * @generated
 	 */
 	int TRANSACTIONAL_STATE = 2;
-
-	/**
-	 * The feature id for the '<em><b>Error State</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRANSACTIONAL_STATE__ERROR_STATE = STATE__ERROR_STATE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -251,15 +233,6 @@ public interface MdcPackage extends EPackage {
 	int STATIONARY_STATE = 3;
 
 	/**
-	 * The feature id for the '<em><b>Error State</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATIONARY_STATE__ERROR_STATE = STATE__ERROR_STATE;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -287,13 +260,22 @@ public interface MdcPackage extends EPackage {
 	int STATIONARY_STATE__TRANSITIONS = STATE_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Error State</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATIONARY_STATE__ERROR_STATE = STATE_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Stationary State</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STATIONARY_STATE_FEATURE_COUNT = STATE_FEATURE_COUNT + 1;
+	int STATIONARY_STATE_FEATURE_COUNT = STATE_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Entry Point</em>' operation.
@@ -340,15 +322,6 @@ public interface MdcPackage extends EPackage {
 	 * @generated
 	 */
 	int TRANSACTIONAL_STATE_IMPL = 4;
-
-	/**
-	 * The feature id for the '<em><b>Error State</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRANSACTIONAL_STATE_IMPL__ERROR_STATE = TRANSACTIONAL_STATE__ERROR_STATE;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -406,15 +379,6 @@ public interface MdcPackage extends EPackage {
 	int STATIONARY_STATE_IMPL = 5;
 
 	/**
-	 * The feature id for the '<em><b>Error State</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATIONARY_STATE_IMPL__ERROR_STATE = STATIONARY_STATE__ERROR_STATE;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -440,6 +404,15 @@ public interface MdcPackage extends EPackage {
 	 * @ordered
 	 */
 	int STATIONARY_STATE_IMPL__TRANSITIONS = STATIONARY_STATE__TRANSITIONS;
+
+	/**
+	 * The feature id for the '<em><b>Error State</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATIONARY_STATE_IMPL__ERROR_STATE = STATIONARY_STATE__ERROR_STATE;
 
 	/**
 	 * The number of structural features of the '<em>Stationary State Impl</em>' class.
@@ -541,17 +514,6 @@ public interface MdcPackage extends EPackage {
 	EClass getState();
 
 	/**
-	 * Returns the meta object for the reference '{@link br.ufes.inf.mdc.mdc.State#getErrorState <em>Error State</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Error State</em>'.
-	 * @see br.ufes.inf.mdc.mdc.State#getErrorState()
-	 * @see #getState()
-	 * @generated
-	 */
-	EReference getState_ErrorState();
-
-	/**
 	 * Returns the meta object for the attribute '{@link br.ufes.inf.mdc.mdc.State#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -613,6 +575,17 @@ public interface MdcPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getStationaryState_Transitions();
+
+	/**
+	 * Returns the meta object for the reference '{@link br.ufes.inf.mdc.mdc.StationaryState#getErrorState <em>Error State</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Error State</em>'.
+	 * @see br.ufes.inf.mdc.mdc.StationaryState#getErrorState()
+	 * @see #getStationaryState()
+	 * @generated
+	 */
+	EReference getStationaryState_ErrorState();
 
 	/**
 	 * Returns the meta object for the '{@link br.ufes.inf.mdc.mdc.StationaryState#handler() <em>Handler</em>}' operation.
@@ -722,14 +695,6 @@ public interface MdcPackage extends EPackage {
 		EClass STATE = eINSTANCE.getState();
 
 		/**
-		 * The meta object literal for the '<em><b>Error State</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference STATE__ERROR_STATE = eINSTANCE.getState_ErrorState();
-
-		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -780,6 +745,14 @@ public interface MdcPackage extends EPackage {
 		 * @generated
 		 */
 		EReference STATIONARY_STATE__TRANSITIONS = eINSTANCE.getStationaryState_Transitions();
+
+		/**
+		 * The meta object literal for the '<em><b>Error State</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STATIONARY_STATE__ERROR_STATE = eINSTANCE.getStationaryState_ErrorState();
 
 		/**
 		 * The meta object literal for the '<em><b>Handler</b></em>' operation.

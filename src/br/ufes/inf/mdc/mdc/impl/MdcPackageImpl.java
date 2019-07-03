@@ -185,18 +185,8 @@ public class MdcPackageImpl extends EPackageImpl implements MdcPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getState_ErrorState() {
-		return (EReference)stateEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EAttribute getState_Name() {
-		return (EAttribute)stateEClass.getEStructuralFeatures().get(1);
+		return (EAttribute)stateEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -206,7 +196,7 @@ public class MdcPackageImpl extends EPackageImpl implements MdcPackage {
 	 */
 	@Override
 	public EAttribute getState_Messages() {
-		return (EAttribute)stateEClass.getEStructuralFeatures().get(2);
+		return (EAttribute)stateEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -247,6 +237,16 @@ public class MdcPackageImpl extends EPackageImpl implements MdcPackage {
 	@Override
 	public EReference getStationaryState_Transitions() {
 		return (EReference)stationaryStateEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getStationaryState_ErrorState() {
+		return (EReference)stationaryStateEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -324,7 +324,6 @@ public class MdcPackageImpl extends EPackageImpl implements MdcPackage {
 		createEReference(chatbotEClass, CHATBOT__STATES);
 
 		stateEClass = createEClass(STATE);
-		createEReference(stateEClass, STATE__ERROR_STATE);
 		createEAttribute(stateEClass, STATE__NAME);
 		createEAttribute(stateEClass, STATE__MESSAGES);
 		createEOperation(stateEClass, STATE___ENTRY_POINT);
@@ -333,6 +332,7 @@ public class MdcPackageImpl extends EPackageImpl implements MdcPackage {
 
 		stationaryStateEClass = createEClass(STATIONARY_STATE);
 		createEReference(stationaryStateEClass, STATIONARY_STATE__TRANSITIONS);
+		createEReference(stationaryStateEClass, STATIONARY_STATE__ERROR_STATE);
 		createEOperation(stationaryStateEClass, STATIONARY_STATE___HANDLER);
 		createEOperation(stationaryStateEClass, STATIONARY_STATE___SINC_TRANSITIONS);
 
@@ -381,7 +381,6 @@ public class MdcPackageImpl extends EPackageImpl implements MdcPackage {
 		initEReference(getChatbot_States(), this.getState(), null, "states", null, 1, -1, Chatbot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(stateEClass, State.class, "State", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getState_ErrorState(), this.getTransactionalState(), null, "errorState", null, 0, 1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEAttribute(getState_Name(), ecorePackage.getEString(), "name", null, 0, 1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getState_Messages(), ecorePackage.getEString(), "messages", null, 0, -1, State.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -391,6 +390,7 @@ public class MdcPackageImpl extends EPackageImpl implements MdcPackage {
 
 		initEClass(stationaryStateEClass, StationaryState.class, "StationaryState", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getStationaryState_Transitions(), this.getState(), null, "transitions", null, 0, -1, StationaryState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getStationaryState_ErrorState(), this.getTransactionalState(), null, "errorState", null, 1, 1, StationaryState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getStationaryState__Handler(), this.getState(), "handler", 0, 1, IS_UNIQUE, IS_ORDERED);
 

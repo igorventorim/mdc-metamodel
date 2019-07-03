@@ -15,7 +15,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link br.ufes.inf.mdc.mdc.State#getErrorState <em>Error State</em>}</li>
  *   <li>{@link br.ufes.inf.mdc.mdc.State#getName <em>Name</em>}</li>
  *   <li>{@link br.ufes.inf.mdc.mdc.State#getMessages <em>Messages</em>}</li>
  * </ul>
@@ -25,28 +24,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface State extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Error State</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Error State</em>' reference.
-	 * @see #setErrorState(TransactionalState)
-	 * @see br.ufes.inf.mdc.mdc.MdcPackage#getState_ErrorState()
-	 * @model derived="true"
-	 * @generated
-	 */
-	TransactionalState getErrorState();
-
-	/**
-	 * Sets the value of the '{@link br.ufes.inf.mdc.mdc.State#getErrorState <em>Error State</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Error State</em>' reference.
-	 * @see #getErrorState()
-	 * @generated
-	 */
-	void setErrorState(TransactionalState value);
-
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
