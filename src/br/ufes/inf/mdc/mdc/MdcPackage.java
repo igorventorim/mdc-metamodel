@@ -95,13 +95,22 @@ public interface MdcPackage extends EPackage {
 	int CHATBOT__STATES = 2;
 
 	/**
+	 * The feature id for the '<em><b>Init State</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHATBOT__INIT_STATE = 3;
+
+	/**
 	 * The number of structural features of the '<em>Chatbot</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CHATBOT_FEATURE_COUNT = 3;
+	int CHATBOT_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Chatbot</em>' class.
@@ -141,13 +150,22 @@ public interface MdcPackage extends EPackage {
 	int STATE__MESSAGES = 1;
 
 	/**
+	 * The feature id for the '<em><b>Input</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATE__INPUT = 2;
+
+	/**
 	 * The number of structural features of the '<em>State</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STATE_FEATURE_COUNT = 2;
+	int STATE_FEATURE_COUNT = 3;
 
 	/**
 	 * The operation id for the '<em>Entry Point</em>' operation.
@@ -194,6 +212,15 @@ public interface MdcPackage extends EPackage {
 	 * @ordered
 	 */
 	int TRANSACTIONAL_STATE__MESSAGES = STATE__MESSAGES;
+
+	/**
+	 * The feature id for the '<em><b>Input</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSACTIONAL_STATE__INPUT = STATE__INPUT;
 
 	/**
 	 * The number of structural features of the '<em>Transactional State</em>' class.
@@ -249,6 +276,15 @@ public interface MdcPackage extends EPackage {
 	 * @ordered
 	 */
 	int STATIONARY_STATE__MESSAGES = STATE__MESSAGES;
+
+	/**
+	 * The feature id for the '<em><b>Input</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATIONARY_STATE__INPUT = STATE__INPUT;
 
 	/**
 	 * The feature id for the '<em><b>Transitions</b></em>' reference list.
@@ -342,6 +378,15 @@ public interface MdcPackage extends EPackage {
 	int TRANSACTIONAL_STATE_IMPL__MESSAGES = TRANSACTIONAL_STATE__MESSAGES;
 
 	/**
+	 * The feature id for the '<em><b>Input</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSACTIONAL_STATE_IMPL__INPUT = TRANSACTIONAL_STATE__INPUT;
+
+	/**
 	 * The number of structural features of the '<em>Transactional State Impl</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -395,6 +440,15 @@ public interface MdcPackage extends EPackage {
 	 * @ordered
 	 */
 	int STATIONARY_STATE_IMPL__MESSAGES = STATIONARY_STATE__MESSAGES;
+
+	/**
+	 * The feature id for the '<em><b>Input</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STATIONARY_STATE_IMPL__INPUT = STATIONARY_STATE__INPUT;
 
 	/**
 	 * The feature id for the '<em><b>Transitions</b></em>' reference list.
@@ -504,6 +558,17 @@ public interface MdcPackage extends EPackage {
 	EReference getChatbot_States();
 
 	/**
+	 * Returns the meta object for the reference '{@link br.ufes.inf.mdc.mdc.Chatbot#getInitState <em>Init State</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Init State</em>'.
+	 * @see br.ufes.inf.mdc.mdc.Chatbot#getInitState()
+	 * @see #getChatbot()
+	 * @generated
+	 */
+	EReference getChatbot_InitState();
+
+	/**
 	 * Returns the meta object for class '{@link br.ufes.inf.mdc.mdc.State <em>State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -534,6 +599,17 @@ public interface MdcPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getState_Messages();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link br.ufes.inf.mdc.mdc.State#getInput <em>Input</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Input</em>'.
+	 * @see br.ufes.inf.mdc.mdc.State#getInput()
+	 * @see #getState()
+	 * @generated
+	 */
+	EAttribute getState_Input();
 
 	/**
 	 * Returns the meta object for the '{@link br.ufes.inf.mdc.mdc.State#entryPoint() <em>Entry Point</em>}' operation.
@@ -685,6 +761,14 @@ public interface MdcPackage extends EPackage {
 		EReference CHATBOT__STATES = eINSTANCE.getChatbot_States();
 
 		/**
+		 * The meta object literal for the '<em><b>Init State</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CHATBOT__INIT_STATE = eINSTANCE.getChatbot_InitState();
+
+		/**
 		 * The meta object literal for the '{@link br.ufes.inf.mdc.mdc.State <em>State</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -709,6 +793,14 @@ public interface MdcPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute STATE__MESSAGES = eINSTANCE.getState_Messages();
+
+		/**
+		 * The meta object literal for the '<em><b>Input</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STATE__INPUT = eINSTANCE.getState_Input();
 
 		/**
 		 * The meta object literal for the '<em><b>Entry Point</b></em>' operation.

@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link br.ufes.inf.mdc.mdc.Chatbot#getName <em>Name</em>}</li>
  *   <li>{@link br.ufes.inf.mdc.mdc.Chatbot#getToken <em>Token</em>}</li>
  *   <li>{@link br.ufes.inf.mdc.mdc.Chatbot#getStates <em>States</em>}</li>
+ *   <li>{@link br.ufes.inf.mdc.mdc.Chatbot#getInitState <em>Init State</em>}</li>
  * </ul>
  *
  * @see br.ufes.inf.mdc.mdc.MdcPackage#getChatbot()
@@ -80,5 +81,27 @@ public interface Chatbot extends EObject {
 	 * @generated
 	 */
 	EList<State> getStates();
+
+	/**
+	 * Returns the value of the '<em><b>Init State</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Init State</em>' reference.
+	 * @see #setInitState(StationaryState)
+	 * @see br.ufes.inf.mdc.mdc.MdcPackage#getChatbot_InitState()
+	 * @model required="true"
+	 * @generated
+	 */
+	StationaryState getInitState();
+
+	/**
+	 * Sets the value of the '{@link br.ufes.inf.mdc.mdc.Chatbot#getInitState <em>Init State</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Init State</em>' reference.
+	 * @see #getInitState()
+	 * @generated
+	 */
+	void setInitState(StationaryState value);
 
 } // Chatbot

@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link br.ufes.inf.mdc.mdc.State#getName <em>Name</em>}</li>
  *   <li>{@link br.ufes.inf.mdc.mdc.State#getMessages <em>Messages</em>}</li>
+ *   <li>{@link br.ufes.inf.mdc.mdc.State#getInput <em>Input</em>}</li>
  * </ul>
  *
  * @see br.ufes.inf.mdc.mdc.MdcPackage#getState()
@@ -57,6 +58,18 @@ public interface State extends EObject {
 	 * @generated
 	 */
 	EList<String> getMessages();
+
+	/**
+	 * Returns the value of the '<em><b>Input</b></em>' attribute list.
+	 * The list contents are of type {@link java.lang.String}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Input</em>' attribute list.
+	 * @see br.ufes.inf.mdc.mdc.MdcPackage#getState_Input()
+	 * @model
+	 * @generated
+	 */
+	EList<String> getInput();
 
 	/**
 	 * <!-- begin-user-doc -->

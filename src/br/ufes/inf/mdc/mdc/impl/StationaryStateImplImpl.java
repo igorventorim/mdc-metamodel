@@ -32,6 +32,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * <ul>
  *   <li>{@link br.ufes.inf.mdc.mdc.impl.StationaryStateImplImpl#getName <em>Name</em>}</li>
  *   <li>{@link br.ufes.inf.mdc.mdc.impl.StationaryStateImplImpl#getMessages <em>Messages</em>}</li>
+ *   <li>{@link br.ufes.inf.mdc.mdc.impl.StationaryStateImplImpl#getInput <em>Input</em>}</li>
  *   <li>{@link br.ufes.inf.mdc.mdc.impl.StationaryStateImplImpl#getTransitions <em>Transitions</em>}</li>
  *   <li>{@link br.ufes.inf.mdc.mdc.impl.StationaryStateImplImpl#getErrorState <em>Error State</em>}</li>
  * </ul>
@@ -68,6 +69,16 @@ public class StationaryStateImplImpl extends MinimalEObjectImpl.Container implem
 	 * @ordered
 	 */
 	protected EList<String> messages;
+
+	/**
+	 * The cached value of the '{@link #getInput() <em>Input</em>}' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInput()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<String> input;
 
 	/**
 	 * The cached value of the '{@link #getTransitions() <em>Transitions</em>}' reference list.
@@ -142,6 +153,19 @@ public class StationaryStateImplImpl extends MinimalEObjectImpl.Container implem
 			messages = new EDataTypeUniqueEList<String>(String.class, this, MdcPackage.STATIONARY_STATE_IMPL__MESSAGES);
 		}
 		return messages;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<String> getInput() {
+		if (input == null) {
+			input = new EDataTypeUniqueEList<String>(String.class, this, MdcPackage.STATIONARY_STATE_IMPL__INPUT);
+		}
+		return input;
 	}
 
 	/**
@@ -245,6 +269,8 @@ public class StationaryStateImplImpl extends MinimalEObjectImpl.Container implem
 				return getName();
 			case MdcPackage.STATIONARY_STATE_IMPL__MESSAGES:
 				return getMessages();
+			case MdcPackage.STATIONARY_STATE_IMPL__INPUT:
+				return getInput();
 			case MdcPackage.STATIONARY_STATE_IMPL__TRANSITIONS:
 				return getTransitions();
 			case MdcPackage.STATIONARY_STATE_IMPL__ERROR_STATE:
@@ -269,6 +295,10 @@ public class StationaryStateImplImpl extends MinimalEObjectImpl.Container implem
 			case MdcPackage.STATIONARY_STATE_IMPL__MESSAGES:
 				getMessages().clear();
 				getMessages().addAll((Collection<? extends String>)newValue);
+				return;
+			case MdcPackage.STATIONARY_STATE_IMPL__INPUT:
+				getInput().clear();
+				getInput().addAll((Collection<? extends String>)newValue);
 				return;
 			case MdcPackage.STATIONARY_STATE_IMPL__TRANSITIONS:
 				getTransitions().clear();
@@ -295,6 +325,9 @@ public class StationaryStateImplImpl extends MinimalEObjectImpl.Container implem
 			case MdcPackage.STATIONARY_STATE_IMPL__MESSAGES:
 				getMessages().clear();
 				return;
+			case MdcPackage.STATIONARY_STATE_IMPL__INPUT:
+				getInput().clear();
+				return;
 			case MdcPackage.STATIONARY_STATE_IMPL__TRANSITIONS:
 				getTransitions().clear();
 				return;
@@ -317,6 +350,8 @@ public class StationaryStateImplImpl extends MinimalEObjectImpl.Container implem
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case MdcPackage.STATIONARY_STATE_IMPL__MESSAGES:
 				return messages != null && !messages.isEmpty();
+			case MdcPackage.STATIONARY_STATE_IMPL__INPUT:
+				return input != null && !input.isEmpty();
 			case MdcPackage.STATIONARY_STATE_IMPL__TRANSITIONS:
 				return transitions != null && !transitions.isEmpty();
 			case MdcPackage.STATIONARY_STATE_IMPL__ERROR_STATE:
@@ -358,6 +393,8 @@ public class StationaryStateImplImpl extends MinimalEObjectImpl.Container implem
 		result.append(name);
 		result.append(", messages: ");
 		result.append(messages);
+		result.append(", input: ");
+		result.append(input);
 		result.append(')');
 		return result.toString();
 	}

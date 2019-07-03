@@ -29,6 +29,7 @@ import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
  * <ul>
  *   <li>{@link br.ufes.inf.mdc.mdc.impl.TransactionalStateImplImpl#getName <em>Name</em>}</li>
  *   <li>{@link br.ufes.inf.mdc.mdc.impl.TransactionalStateImplImpl#getMessages <em>Messages</em>}</li>
+ *   <li>{@link br.ufes.inf.mdc.mdc.impl.TransactionalStateImplImpl#getInput <em>Input</em>}</li>
  * </ul>
  *
  * @generated
@@ -63,6 +64,16 @@ public class TransactionalStateImplImpl extends MinimalEObjectImpl.Container imp
 	 * @ordered
 	 */
 	protected EList<String> messages;
+
+	/**
+	 * The cached value of the '{@link #getInput() <em>Input</em>}' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInput()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<String> input;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -125,6 +136,19 @@ public class TransactionalStateImplImpl extends MinimalEObjectImpl.Container imp
 	 * @generated
 	 */
 	@Override
+	public EList<String> getInput() {
+		if (input == null) {
+			input = new EDataTypeUniqueEList<String>(String.class, this, MdcPackage.TRANSACTIONAL_STATE_IMPL__INPUT);
+		}
+		return input;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EList entryPoint() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -143,6 +167,8 @@ public class TransactionalStateImplImpl extends MinimalEObjectImpl.Container imp
 				return getName();
 			case MdcPackage.TRANSACTIONAL_STATE_IMPL__MESSAGES:
 				return getMessages();
+			case MdcPackage.TRANSACTIONAL_STATE_IMPL__INPUT:
+				return getInput();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -163,6 +189,10 @@ public class TransactionalStateImplImpl extends MinimalEObjectImpl.Container imp
 				getMessages().clear();
 				getMessages().addAll((Collection<? extends String>)newValue);
 				return;
+			case MdcPackage.TRANSACTIONAL_STATE_IMPL__INPUT:
+				getInput().clear();
+				getInput().addAll((Collection<? extends String>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -181,6 +211,9 @@ public class TransactionalStateImplImpl extends MinimalEObjectImpl.Container imp
 			case MdcPackage.TRANSACTIONAL_STATE_IMPL__MESSAGES:
 				getMessages().clear();
 				return;
+			case MdcPackage.TRANSACTIONAL_STATE_IMPL__INPUT:
+				getInput().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -197,6 +230,8 @@ public class TransactionalStateImplImpl extends MinimalEObjectImpl.Container imp
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case MdcPackage.TRANSACTIONAL_STATE_IMPL__MESSAGES:
 				return messages != null && !messages.isEmpty();
+			case MdcPackage.TRANSACTIONAL_STATE_IMPL__INPUT:
+				return input != null && !input.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -229,6 +264,8 @@ public class TransactionalStateImplImpl extends MinimalEObjectImpl.Container imp
 		result.append(name);
 		result.append(", messages: ");
 		result.append(messages);
+		result.append(", input: ");
+		result.append(input);
 		result.append(')');
 		return result.toString();
 	}

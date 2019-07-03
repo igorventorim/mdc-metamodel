@@ -175,6 +175,16 @@ public class MdcPackageImpl extends EPackageImpl implements MdcPackage {
 	 * @generated
 	 */
 	@Override
+	public EReference getChatbot_InitState() {
+		return (EReference)chatbotEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getState() {
 		return stateEClass;
 	}
@@ -197,6 +207,16 @@ public class MdcPackageImpl extends EPackageImpl implements MdcPackage {
 	@Override
 	public EAttribute getState_Messages() {
 		return (EAttribute)stateEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getState_Input() {
+		return (EAttribute)stateEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -322,10 +342,12 @@ public class MdcPackageImpl extends EPackageImpl implements MdcPackage {
 		createEAttribute(chatbotEClass, CHATBOT__NAME);
 		createEAttribute(chatbotEClass, CHATBOT__TOKEN);
 		createEReference(chatbotEClass, CHATBOT__STATES);
+		createEReference(chatbotEClass, CHATBOT__INIT_STATE);
 
 		stateEClass = createEClass(STATE);
 		createEAttribute(stateEClass, STATE__NAME);
 		createEAttribute(stateEClass, STATE__MESSAGES);
+		createEAttribute(stateEClass, STATE__INPUT);
 		createEOperation(stateEClass, STATE___ENTRY_POINT);
 
 		transactionalStateEClass = createEClass(TRANSACTIONAL_STATE);
@@ -379,10 +401,12 @@ public class MdcPackageImpl extends EPackageImpl implements MdcPackage {
 		initEAttribute(getChatbot_Name(), ecorePackage.getEString(), "name", null, 0, 1, Chatbot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getChatbot_Token(), ecorePackage.getEString(), "token", null, 0, 1, Chatbot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getChatbot_States(), this.getState(), null, "states", null, 1, -1, Chatbot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getChatbot_InitState(), this.getStationaryState(), null, "initState", null, 1, 1, Chatbot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(stateEClass, State.class, "State", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getState_Name(), ecorePackage.getEString(), "name", null, 0, 1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getState_Messages(), ecorePackage.getEString(), "messages", null, 0, -1, State.class, IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getState_Input(), ecorePackage.getEString(), "input", null, 0, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getState__EntryPoint(), ecorePackage.getEEList(), "entryPoint", 0, 1, IS_UNIQUE, IS_ORDERED);
 

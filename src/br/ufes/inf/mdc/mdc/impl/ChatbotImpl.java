@@ -6,6 +6,7 @@ import br.ufes.inf.mdc.mdc.Chatbot;
 import br.ufes.inf.mdc.mdc.MdcPackage;
 import br.ufes.inf.mdc.mdc.State;
 
+import br.ufes.inf.mdc.mdc.StationaryState;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -33,6 +34,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link br.ufes.inf.mdc.mdc.impl.ChatbotImpl#getName <em>Name</em>}</li>
  *   <li>{@link br.ufes.inf.mdc.mdc.impl.ChatbotImpl#getToken <em>Token</em>}</li>
  *   <li>{@link br.ufes.inf.mdc.mdc.impl.ChatbotImpl#getStates <em>States</em>}</li>
+ *   <li>{@link br.ufes.inf.mdc.mdc.impl.ChatbotImpl#getInitState <em>Init State</em>}</li>
  * </ul>
  *
  * @generated
@@ -87,6 +89,16 @@ public class ChatbotImpl extends MinimalEObjectImpl.Container implements Chatbot
 	 * @ordered
 	 */
 	protected EList<State> states;
+
+	/**
+	 * The cached value of the '{@link #getInitState() <em>Init State</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInitState()
+	 * @generated
+	 * @ordered
+	 */
+	protected StationaryState initState;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -172,6 +184,46 @@ public class ChatbotImpl extends MinimalEObjectImpl.Container implements Chatbot
 	 * @generated
 	 */
 	@Override
+	public StationaryState getInitState() {
+		if (initState != null && initState.eIsProxy()) {
+			InternalEObject oldInitState = (InternalEObject)initState;
+			initState = (StationaryState)eResolveProxy(oldInitState);
+			if (initState != oldInitState) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MdcPackage.CHATBOT__INIT_STATE, oldInitState, initState));
+			}
+		}
+		return initState;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public StationaryState basicGetInitState() {
+		return initState;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setInitState(StationaryState newInitState) {
+		StationaryState oldInitState = initState;
+		initState = newInitState;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MdcPackage.CHATBOT__INIT_STATE, oldInitState, initState));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case MdcPackage.CHATBOT__STATES:
@@ -194,6 +246,9 @@ public class ChatbotImpl extends MinimalEObjectImpl.Container implements Chatbot
 				return getToken();
 			case MdcPackage.CHATBOT__STATES:
 				return getStates();
+			case MdcPackage.CHATBOT__INIT_STATE:
+				if (resolve) return getInitState();
+				return basicGetInitState();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -217,6 +272,9 @@ public class ChatbotImpl extends MinimalEObjectImpl.Container implements Chatbot
 				getStates().clear();
 				getStates().addAll((Collection<? extends State>)newValue);
 				return;
+			case MdcPackage.CHATBOT__INIT_STATE:
+				setInitState((StationaryState)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -238,6 +296,9 @@ public class ChatbotImpl extends MinimalEObjectImpl.Container implements Chatbot
 			case MdcPackage.CHATBOT__STATES:
 				getStates().clear();
 				return;
+			case MdcPackage.CHATBOT__INIT_STATE:
+				setInitState((StationaryState)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -256,6 +317,8 @@ public class ChatbotImpl extends MinimalEObjectImpl.Container implements Chatbot
 				return TOKEN_EDEFAULT == null ? token != null : !TOKEN_EDEFAULT.equals(token);
 			case MdcPackage.CHATBOT__STATES:
 				return states != null && !states.isEmpty();
+			case MdcPackage.CHATBOT__INIT_STATE:
+				return initState != null;
 		}
 		return super.eIsSet(featureID);
 	}
